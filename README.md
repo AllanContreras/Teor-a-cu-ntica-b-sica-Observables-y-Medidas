@@ -1,7 +1,7 @@
 # Teoria cuantica basica Observables y Medidas
 
 # FUNCIONES 
--  1. Probabilidad de transición
+# 1. Probabilidad de transición
 Objetivo: Calcular la probabilidad de transición entre dos vectores (kets) en un sistema cuántico.
 
 # Pasos:
