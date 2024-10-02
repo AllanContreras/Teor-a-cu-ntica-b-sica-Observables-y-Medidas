@@ -1,28 +1,31 @@
 # Teoria cuantica basica Observables y Medidas
 
-# FUNCIONES 
-# 1. Probabilidad de transición
-Objetivo: Calcular la probabilidad de transición entre dos vectores (kets) en un sistema cuántico.
+# Problemas
+ - La probabilidad de encontrar una partícula en una posición específica.
+ - La probabilidad de transición entre dos estados cuánticos.
 
-# Pasos:
+# Solución
 
-- Amplitud de transición: Utilicé el producto interno (o producto punto conjugado) entre los dos vectores. Esto se hace con np.vdot(ket1, ket2) en NumPy.
-
-- Probabilidad de transición: Tomé el valor absoluto al cuadrado de la amplitud de transición para obtener la probabilidad. Esto se hace con np.abs(amplitud)**2.
-
-  
-# 2. Media y varianza de un observable
-Objetivo: Verificar si una matriz es hermitiana y calcular la media y la varianza de un observable en un estado dado.
-
-# Pasos:
-
-- Verificación de hermiticidad: Comprobé si la matriz es igual a su conjugada transpuesta usando np.allclose(matriz, matriz.conj().T).
-  
-- Cálculo de la media: Utilicé el producto interno entre el ket y el observable aplicado al ket, np.vdot(ket, np.dot(observable, ket)).
-  
-- Cálculo de la varianza: Calculé el valor esperado del observable al cuadrado y resté el cuadrado de la media.
+- Probabilidad de encontrar la partícula en una posición específica:
+- Utilizamos el cuadrado del valor absoluto de la amplitud de probabilidad en esa posición.
+Fórmula:
 
 
+``` txt
+ P(i)=∣ci​∣2
+```
+
+- Probabilidad de transición entre dos estados:
+- Calculamos el valor absoluto del producto interno de los dos vectores de estado al cuadrado.
+Fórmula:
+
+``` txt
+P(ψ→ϕ)=∣⟨ϕ∣ψ⟩∣2=​i∑​di∗​ci​​2
+```
+ # Implementación en Python
+- Usamos Python para implementar estas fórmulas. Aquí están los pasos clave:
+ - Definimos una función probabilidad_posicion para calcular la probabilidad de encontrar la partícula en una posición dada.
+- Definimos una función probabilidad_transicion para calcular la probabilidad de transición entre dos estados.
 
 # Herramientas utilizadas:
 
